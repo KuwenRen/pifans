@@ -1,0 +1,7 @@
+/.idea
+/.hbuilderx
+*.log
+/unpackage/release
+/unpackage/dist
+/unpackage/debug
+/unpackage/cache
