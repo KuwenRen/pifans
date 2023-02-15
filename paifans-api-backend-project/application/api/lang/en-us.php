@@ -1,0 +1,30 @@
+<?php
+
+return [
+        '请求成功' => 'Request succeeded',
+        '请求失败' => 'Request was aborted',
+        '发送成功' => 'Sent successfully',
+        '发送失败' => 'Fail in send',
+        '验证码错误' => 'Verification code error',
+        '手机格式错误' => 'Mobile phone format error',
+        '上级不存在' => 'Superior does not exist',
+        '该账号已存在' => 'This account already exists',
+        '登录成功' => 'Login succeeded',
+        '该账号已禁用' => 'This account is disabled',
+        '密码错误'  => 'Password error',
+        '修改成功' => 'Modified successfully',
+        '修改失败' => 'Modification failed',
+        '上传成功' => 'Uploaded successful',
+        '旧密码错误' => 'Old password error',
+        '新密码与旧密码一致' => 'The new password is consistent with the old password',
+        '新密码与确认新密码不一致' => 'The new password is inconsistent with the confirmed new password',
+        '账号不存在' => 'Account does not exist',
+        '请登录后操作' => 'Please login first',
+        '提交成功' => 'Submitted successfully',
+        '提交失败' => 'Submission failed',
+        '添加成功' => 'Added successfully',
+        '添加失败' => 'Add failed',
+        '取消成功' => 'Cancellation succeeded',
+        '取消失败' => 'Cancellation failed',
+
+];

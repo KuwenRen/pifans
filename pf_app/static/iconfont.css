@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'iconfont';  /* Project id 3055856 */
+  src: url('https://at.alicdn.com/t/font_3055856_9snokk06068.woff2?t=1640791337423') format('woff2'),
+       url('https://at.alicdn.com/t/font_3055856_9snokk06068.woff?t=1640791337423') format('woff'),
+       url('https://at.alicdn.com/t/font_3055856_9snokk06068.ttf?t=1640791337423') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-date:before {
+  content: "\e6f2";
+}
+
+.icon-dianzan:before {
+  content: "\e6ef";
+}
+
+.icon-liulanliang:before {
+  content: "\e6f0";
+}
+
+.icon-pinglun:before {
+  content: "\e6f1";
+}
+
+.icon-chart:before {
+  content: "\e6ee";
+}
+
+.icon-home:before {
+  content: "\e6e3";
+}
+
+.icon-ecology:before {
+  content: "\e6e4";
+}
+
+.icon-about:before {
+  content: "\e6e5";
+}
+
+.icon-tuichu:before {
+  content: "\e6e6";
+}
+
+.icon-information:before {
+  content: "\e6e7";
+}
+
+.icon-telegraph:before {
+  content: "\e6e8";
+}
+
+.icon-leave:before {
+  content: "\e6e9";
+}
+
+.icon-public:before {
+  content: "\e6ea";
+}
+
+.icon-xiala:before {
+  content: "\e6eb";
+}
+
+.icon-lang:before {
+  content: "\e6ec";
+}
+
+.icon-knowledge:before {
+  content: "\e6ed";
+}
+

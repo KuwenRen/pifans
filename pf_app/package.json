@@ -1,0 +1,11 @@
+{
+    "id": "pifans",
+    "name": "PiFans",
+    "version": "1.0.0",
+    "description": "pifans club uni-app版本",
+    "keywords": [],
+    "dependencies": {
+        "@amap/amap-jsapi-loader": "^1.0.1",
+        "easemob-websdk": "^4.0.3"
+    }
+}

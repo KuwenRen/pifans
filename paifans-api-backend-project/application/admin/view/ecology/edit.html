@@ -1,0 +1,128 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('应用标题(中文)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title1" data-rule="required" class="form-control" name="row[title1]" type="text" value="{$row.title1|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('应用标题(English)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title2" data-rule="required" class="form-control" name="row[title2]" type="text" value="{$row.title2|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('应用图片(单图)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-image" data-rule="required" class="form-control" size="50" name="row[image]" type="text" value="{$row.image|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="faupload-image" class="btn btn-danger faupload" data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-image"></span>
+            </div>
+            <ul class="row list-inline faupload-preview" id="p-image"></ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('用户图片(多图)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-images" data-rule="required" class="form-control" size="50" name="row[images]" type="text" value="{$row.images|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="faupload-images" class="btn btn-danger faupload" data-input-id="c-images" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="true" data-preview-id="p-images"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-images" class="btn btn-primary fachoose" data-input-id="c-images" data-mimetype="image/*" data-multiple="true"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-images"></span>
+            </div>
+            <ul class="row list-inline faupload-preview" id="p-images"></ul>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('分类')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-type" data-rule="required" class="form-control selectpicker" name="row[type]">
+                {foreach name="typeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.type"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('星级')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-star" data-rule="required" class="form-control" name="row[star]" type="number" value="{$row.star|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('评论人数')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-comment_number" data-rule="required" class="form-control" name="row[comment_number]" type="number" value="{$row.comment_number|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('推荐说明(中文)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-recommend1" data-rule="required" class="form-control " rows="5" name="row[recommend1]" cols="50">{$row.recommend1|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('推荐说明(English)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-recommend2" data-rule="required" class="form-control " rows="5" name="row[recommend2]" cols="50">{$row.recommend2|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('应用介绍(中文)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-introduce1" data-rule="required" class="form-control " rows="5" name="row[introduce1]" cols="50">{$row.introduce1|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('应用介绍(English)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-introduce2" data-rule="required" class="form-control " rows="5" name="row[introduce2]" cols="50">{$row.introduce2|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('开发者(中文)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-developer1" data-rule="required" class="form-control " rows="5" name="row[developer1]" cols="50">{$row.developer1|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('开发者(English)')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-developer2" data-rule="required" class="form-control " rows="5" name="row[developer2]" cols="50">{$row.developer2|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('应用下载地址')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-download_url" data-rule="required" class="form-control" name="row[download_url]" type="text" value="{$row.download_url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('应用网址')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-url" data-rule="required" class="form-control" name="row[url]" type="text" value="{$row.url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('权重')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-weigh" data-rule="required" class="form-control" name="row[weigh]" type="number" value="{$row.weigh|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
